@@ -8,7 +8,7 @@
 					<div class="col-md-5">
 						<div class="footer-widget">
 							<div class="footer-logo">
-								<a href="index.html" class="logo"><img src="./img/logo.png" alt=""></a>
+								<a href="index.html" class="logo"><img src="/img/logo.png" alt=""></a>
 							</div>
 							<ul class="footer-nav">
 								<li><a href="#">Privacy Policy</a></li>
@@ -74,6 +74,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		<!-- /Footer -->
 
 		<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/main.js"></script>

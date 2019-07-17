@@ -48,7 +48,7 @@
                             <a class="post-category cat-1" href="category.html">Web Design</a>
                             <span class="post-date">March 27, 2018</span>
                         </div>
-                        <h3 class="post-title"><a href="blog-post.html">{{$item->title}}</a></h3>
+                        <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                     </div>
                 </div>
             </div>
