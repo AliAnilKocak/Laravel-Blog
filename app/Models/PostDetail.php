@@ -1,20 +1,22 @@
 <?php
 
+namespace App;
+
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class PostDetail extends Model
 {
     use SoftDeletes;
-    protected $table = "post";
+    protected $table = "post_detail";
     protected $guarded = [];
 
-    public function detail()
+    public function post()
     {
-        return $this->hasOne('App\Models\PostDetail')->withDefault();
+        return $this->belongsTo('App\Models\Post');
     }
-
-
-
 }
+
+

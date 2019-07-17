@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomePageController@index')->name('homepage');
+Route::get('/post/{slug_postname}', 'PostController@index')->name('post');
 
 Route::get('/{navbar_slug}', 'NavbarController@index')->name('navbar');

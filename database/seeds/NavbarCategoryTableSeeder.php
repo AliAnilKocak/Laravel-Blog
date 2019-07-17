@@ -12,37 +12,37 @@ class NavbarCategoryTableSeeder extends Seeder
      */
     public function run()
     {
-
+        DB::table('navbar_category')->truncate();
 
         DB::table('navbar_category')->insert([
             'name' => 'News',
             'slug' => 'news',
-            'color' => '#4BB92F'
+            'color' => ''
         ]);
         DB::table('navbar_category')->insert([
             'name' => 'Popular',
             'slug' => 'popular',
-            'color' => '#ff8700'
+            'color' => ''
         ]);
         DB::table('navbar_category')->insert([
             'name' => 'Web Design',
             'slug' => 'web-design',
-            'color' => '#0078ff'
+            'color' => '1'
         ]);
         DB::table('navbar_category')->insert([
             'name' => 'Javascript',
             'slug' => 'javascript',
-            'color' => '#8d00ff'
+            'color' => '2'
         ]);
         DB::table('navbar_category')->insert([
             'name' => 'Css',
             'slug' => 'css',
-            'color' => '#4BB92F'
+            'color' => '3'
         ]);
         DB::table('navbar_category')->insert([
             'name' => 'Jquery',
             'slug' => 'jquery',
-            'color' => '#ff8700'
+            'color' => '4'
         ]);
     }
 }
