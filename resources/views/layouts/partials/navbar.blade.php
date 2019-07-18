@@ -13,9 +13,9 @@
 
                 <!-- nav -->
                 <ul class="nav-menu nav navbar-nav">
-               @foreach ($allNavbarCategories as $item)
-               <li class="cat-{{$item->color}}"><a href="{{route('navbar',$item->slug)}}">{{$item->name}}</a></li>
-               @endforeach
+                    @foreach ($allNavbarCategories as $item)
+                    <li class="cat-{{$item->color}}"><a href="{{route('navbar',$item->slug)}}">{{$item->name}}</a></li>
+                    @endforeach
 
                 </ul>
                 <!-- /nav -->
@@ -39,11 +39,12 @@
             <!-- nav -->
             <div class="section-row">
                 <ul class="nav-aside-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Join Us</a></li>
-                    <li><a href="#">Advertisement</a></li>
-                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="{{route('homepage')}}">Home</a></li>
+                    <li><a href="{{route('about')}}">About Us</a></li>
+                    <li><a href="{{route('contact')}}">Contacts</a></li>
+                    @foreach ($allNavbarCategories as $item)
+                    <li><a href="{{route('navbar',$item->slug)}}">{{$item->name}}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <!-- /nav -->
@@ -51,29 +52,16 @@
             <!-- widget posts -->
             <div class="section-row">
                 <h3>Recent Posts</h3>
+                @foreach ($show_featured_boot as $item)
                 <div class="post post-widget">
-                    <a class="post-img" href="blog-post.html"><img src="/img/widget-2.jpg" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                     <div class="post-body">
-                        <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website Design
-                                Mockup Into Code Automatically</a></h3>
+                        <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="post post-widget">
-                    <a class="post-img" href="blog-post.html"><img src="/img/widget-3.jpg" alt=""></a>
-                    <div class="post-body">
-                        <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The Backend
-                                Development Block!</a></h3>
-                    </div>
-                </div>
 
-                <div class="post post-widget">
-                    <a class="post-img" href="blog-post.html"><img src="/img/widget-4.jpg" alt=""></a>
-                    <div class="post-body">
-                        <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And Development
-                                Tools</a></h3>
-                    </div>
-                </div>
             </div>
             <!-- /widget posts -->
 

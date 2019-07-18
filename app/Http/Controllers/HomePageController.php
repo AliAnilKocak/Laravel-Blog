@@ -76,4 +76,13 @@ class HomePageController extends Controller
             'show_big'
         ));
     }
+
+    public function about()
+    {
+        return view('about');
+    }
+    public function contact()
+    {
+        return view('contacts');
+    }
 }
