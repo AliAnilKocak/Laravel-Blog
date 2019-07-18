@@ -14,7 +14,10 @@ class Post extends Model
     {
         return $this->hasOne('App\Models\PostDetail')->withDefault();
     }
-
+    public function tags(){
+        return $this->belongsToMany('App\Models\Tag','tag_post');
+        //Bir kategoriye ait ürünleri getirir. belongToMany M:M ilişkiyi işaret eder.
+    }
 
 
 }
