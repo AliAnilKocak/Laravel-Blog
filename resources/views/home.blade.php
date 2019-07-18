@@ -13,13 +13,13 @@
             <!-- post -->
             <div class="col-md-6">
                 <div class="post post-thumb">
-                    <a class="post-img" href="blog-post.html"><img src="./img/post-2.jpg" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->post->slug)}}"><img src="{{$item->post->img}}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-3" href="category.html">Jquery</a>
-                            <span class="post-date">March 27, 2018</span>
+                            <span class="post-date">{{$item->created_at}}</span>
                         </div>
-                        <h3 class="post-title"><a href="blog-post.html">{{$item->post->title}}</a></h3>
+                        <h3 class="post-title"><a href="{{route('post',$item->post->slug)}}">{{$item->post->title}}</a></h3>
                     </div>
                 </div>
             </div>
@@ -42,11 +42,11 @@
             <!-- post -->
             <div class="col-md-4">
                 <div class="post">
-                    <a class="post-img" href="blog-post.html"><img src="./img/post-2.jpg" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-1" href="category.html">Web Design</a>
-                            <span class="post-date">March 27, 2018</span>
+                            <span class="post-date">{{$item->created_at}}</span>
                         </div>
                         <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                     </div>
@@ -68,13 +68,14 @@
                     <!-- post -->
                     <div class="col-md-12">
                         <div class="post post-thumb">
-                            <a class="post-img" href="blog-post.html"><img src="./img/post-2.jpg" alt=""></a>
+                                <a class="post-img" href="{{route('post',$show_big[0]->slug)}}"><img src="{{$show_big[0]->img}}" alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
-                                    <a class="post-category cat-3" href="category.html">Jquery</a>
-                                    <span class="post-date">March 27, 2018</span>
+                                    <a class="
+                                    " href="category.html">Jquery</a>
+                                    <span class="post-date">{{$show_big[0]->created_at}}</span>
                                 </div>
-                                <h3 class="post-title"><a href="blog-post.html">{{$show_big[0]->title}}</a></h3>
+                                <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$show_big[0]->title}}</a></h3>
                             </div>
                         </div>
                     </div>
@@ -88,13 +89,13 @@
                     <!-- post -->
                     <div class="col-md-6">
                         <div class="post">
-                            <a class="post-img" href="blog-post.html"><img src="./img/post-3.jpg" alt=""></a>
+                                <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
                                     <a class="post-category cat-1" href="category.html">Web Design</a>
-                                    <span class="post-date">March 27, 2018</span>
+                                    <span class="post-date">{{$item->created_at}}</span>
                                 </div>
-                                <h3 class="post-title"><a href="blog-post.html">{{$item->title}}</a></h3>
+                                <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                             </div>
                         </div>
                     </div>
@@ -115,9 +116,9 @@
 
                     @foreach ($show_most_read_sidebar as $item)
                     <div class="post post-widget">
-                        <a class="post-img" href="blog-post.html"><img src="./img/widget-1.jpg" alt=""></a>
+                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                         <div class="post-body">
-                            <h3 class="post-title"><a href="blog-post.html">{{$item->title}}</a></h3>
+                            <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                         </div>
                     </div>
                     @endforeach
@@ -136,13 +137,13 @@
 
                     @foreach ($show_featured_sidebar as $item)
                     <div class="post post-thumb">
-                        <a class="post-img" href="blog-post.html"><img src="./img/post-2.jpg" alt=""></a>
+                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-3" href="category.html">Jquery</a>
-                                <span class="post-date">March 27, 2018</span>
+                                <span class="post-date">{{$item->created_at}}</span>
                             </div>
-                            <h3 class="post-title"><a href="blog-post.html">{{$item->title}}</a>
+                            <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a>
                             </h3>
                         </div>
                     </div>
@@ -188,13 +189,13 @@
             <!-- post -->
             <div class="col-md-4">
                 <div class="post">
-                    <a class="post-img" href="blog-post.html"><img src="./img/post-4.jpg" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-2" href="category.html">JavaScript</a>
-                            <span class="post-date">March 27, 2018</span>
+                            <span class="post-date">{{$item->created_at}}</span>
                         </div>
-                        <h3 class="post-title"><a href="blog-post.html">{{$item->title}}</a></h3>
+                        <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                     </div>
                 </div>
             </div>
@@ -226,13 +227,13 @@
                     <!-- post -->
                     <div class="col-md-12">
                         <div class="post post-row">
-                            <a class="post-img" href="blog-post.html"><img src="./img/post-4.jpg" alt=""></a>
+                                <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
                                     <a class="post-category cat-2" href="category.html">JavaScript</a>
-                                    <span class="post-date">March 27, 2018</span>
+                                    <span class="post-date">{{$item->created_at}}</span>
                                 </div>
-                                <h3 class="post-title"><a href="blog-post.html">{{$item->title}}</a></h3>
+                                <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
                             </div>

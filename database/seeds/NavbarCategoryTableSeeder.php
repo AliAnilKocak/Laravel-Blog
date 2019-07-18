@@ -15,33 +15,33 @@ class NavbarCategoryTableSeeder extends Seeder
         DB::table('navbar_category')->truncate();
 
         DB::table('navbar_category')->insert([
-            'name' => 'News',
-            'slug' => 'news',
-            'color' => ''
+            'name' => 'UI',
+            'slug' => 'ui',
+            'color' => '4'
         ]);
         DB::table('navbar_category')->insert([
-            'name' => 'Popular',
-            'slug' => 'popular',
-            'color' => ''
-        ]);
-        DB::table('navbar_category')->insert([
-            'name' => 'Web Design',
-            'slug' => 'web-design',
-            'color' => '1'
-        ]);
-        DB::table('navbar_category')->insert([
-            'name' => 'Javascript',
-            'slug' => 'javascript',
-            'color' => '2'
-        ]);
-        DB::table('navbar_category')->insert([
-            'name' => 'Css',
-            'slug' => 'css',
+            'name' => 'Widgets',
+            'slug' => 'widgets',
             'color' => '3'
         ]);
         DB::table('navbar_category')->insert([
-            'name' => 'Jquery',
-            'slug' => 'jquery',
+            'name' => 'Apps',
+            'slug' => 'apps',
+            'color' => '1'
+        ]);
+        DB::table('navbar_category')->insert([
+            'name' => 'Libraries',
+            'slug' => 'libraries',
+            'color' => '2'
+        ]);
+        DB::table('navbar_category')->insert([
+            'name' => 'Learn Flutter',
+            'slug' => 'learn',
+            'color' => '3'
+        ]);
+        DB::table('navbar_category')->insert([
+            'name' => 'Flutter Communities',
+            'slug' => 'communities',
             'color' => '4'
         ]);
     }

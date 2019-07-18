@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'HomePageController@index')->name('homepage');
-Route::get('/post/{slug_postname}', 'PostController@index')->name('post');
+Route::get('/{slug_postname}', 'PostController@index')->name('post');
+Route::get('/tag/{slug_tagname}', 'TagController@index')->name('tag');
+
 
 Route::get('/{navbar_slug}', 'NavbarController@index')->name('navbar');

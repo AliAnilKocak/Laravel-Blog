@@ -7,7 +7,7 @@
             <div class="container">
                 <!-- logo -->
                 <div class="nav-logo">
-                    <a href="index.html" class="logo"><img src="/img/b.png" alt=""></a>
+                    <a href="{{route('homepage')}}" class="logo"><img src="/img/b.png" alt=""></a>
                 </div>
                 <!-- /logo -->
 

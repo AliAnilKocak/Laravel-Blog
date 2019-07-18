@@ -10,7 +10,7 @@ class PostController extends Controller
     public function index($slug_postname)
     {
         $post = Post::whereSlug($slug_postname)->firstOrFail();
-        dd($post);
+
         return view('post', compact('post'));
     }
 }
