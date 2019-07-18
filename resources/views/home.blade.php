@@ -13,13 +13,15 @@
             <!-- post -->
             <div class="col-md-6">
                 <div class="post post-thumb">
-                    <a class="post-img" href="{{route('post',$item->post->slug)}}"><img src="{{$item->post->img}}" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->post->slug)}}"><img src="{{$item->post->img}}"
+                            alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-3" href="category.html">Jquery</a>
                             <span class="post-date">{{$item->created_at}}</span>
                         </div>
-                        <h3 class="post-title"><a href="{{route('post',$item->post->slug)}}">{{$item->post->title}}</a></h3>
+                        <h3 class="post-title"><a href="{{route('post',$item->post->slug)}}">{{$item->post->title}}</a>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -68,14 +70,16 @@
                     <!-- post -->
                     <div class="col-md-12">
                         <div class="post post-thumb">
-                                <a class="post-img" href="{{route('post',$show_big[0]->slug)}}"><img src="{{$show_big[0]->img}}" alt=""></a>
+                            <a class="post-img" href="{{route('post',$show_big[0]->slug)}}"><img
+                                    src="{{$show_big[0]->img}}" alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
                                     <a class="
                                     " href="category.html">Jquery</a>
                                     <span class="post-date">{{$show_big[0]->created_at}}</span>
                                 </div>
-                                <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$show_big[0]->title}}</a></h3>
+                                <h3 class="post-title"><a
+                                        href="{{route('post',$item->slug)}}">{{$show_big[0]->title}}</a></h3>
                             </div>
                         </div>
                     </div>
@@ -89,7 +93,8 @@
                     <!-- post -->
                     <div class="col-md-6">
                         <div class="post">
-                                <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}"
+                                    alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
                                     <a class="post-category cat-1" href="category.html">Web Design</a>
@@ -116,7 +121,7 @@
 
                     @foreach ($show_most_read_sidebar as $item)
                     <div class="post post-widget">
-                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                         </div>
@@ -137,7 +142,7 @@
 
                     @foreach ($show_featured_sidebar as $item)
                     <div class="post post-thumb">
-                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-3" href="category.html">Jquery</a>
@@ -189,7 +194,7 @@
             <!-- post -->
             <div class="col-md-4">
                 <div class="post">
-                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-2" href="category.html">JavaScript</a>
@@ -227,7 +232,8 @@
                     <!-- post -->
                     <div class="col-md-12">
                         <div class="post post-row">
-                                <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}"
+                                    alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
                                     <a class="post-category cat-2" href="category.html">JavaScript</a>
@@ -261,40 +267,7 @@
                     </a>
                 </div>
                 <!-- /ad -->
-
-                <!-- catagories -->
-                <div class="aside-widget">
-                    <div class="section-title">
-                        <h2>Catagories</h2>
-                    </div>
-                    <div class="category-widget">
-                        <ul>
-                            <li><a href="#" class="cat-1">Web Design<span>340</span></a></li>
-                            <li><a href="#" class="cat-2">JavaScript<span>74</span></a></li>
-                            <li><a href="#" class="cat-4">JQuery<span>41</span></a></li>
-                            <li><a href="#" class="cat-3">CSS<span>35</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /catagories -->
-
-                <!-- tags -->
-                <div class="aside-widget">
-                    <div class="tags-widget">
-                        <ul>
-                            <li><a href="#">Chrome</a></li>
-                            <li><a href="#">CSS</a></li>
-                            <li><a href="#">Tutorial</a></li>
-                            <li><a href="#">Backend</a></li>
-                            <li><a href="#">JQuery</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">JavaScript</a></li>
-                            <li><a href="#">Website</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /tags -->
+                @include('layouts.partials.categories_tag_rightbar')
             </div>
         </div>
         <!-- /row -->
