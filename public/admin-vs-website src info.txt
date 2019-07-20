@@ -1,0 +1,11 @@
+admin
+    +images
+    +build
+    +src
+    +vendors
+
+website
+     +css
+    +fonts
+    +img
+    +js		
