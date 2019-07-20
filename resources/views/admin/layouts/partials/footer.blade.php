@@ -8,7 +8,7 @@
 <!-- /footer content -->
 </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <!-- jQuery -->
 <script src="../vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->

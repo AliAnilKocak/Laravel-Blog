@@ -12,7 +12,11 @@ Route::get('/tag/{slug_tagname}', 'TagController@index')->name('tag');
 Route::get('/category/{slug_categoryname}', 'CategoryController@index')->name('category');
 
 Route::group(['middleware' => 'auth'], function () {
-    
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('/home', 'AdminHomePageController@index')->name('admin.homepage');
+    });
+
+
 });
 
 Route::group(['prefix' => 'admin'], function () {
