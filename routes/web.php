@@ -14,6 +14,7 @@ Route::get('/category/{slug_categoryname}', 'CategoryController@index')->name('c
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/home', 'AdminHomePageController@index')->name('admin.homepage');
+        Route::get('/posts', 'AdminPostController@index')->name('admin.posts');
     });
 
 
