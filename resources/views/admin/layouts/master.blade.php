@@ -24,4 +24,4 @@
     @yield('footer')
 
 
-</html>
+

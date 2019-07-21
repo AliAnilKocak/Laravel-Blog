@@ -1,8 +1,8 @@
 <!-- footer content -->
 <footer>
-  <div class="pull-right">
+<div class="pull-right">
     Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-  </div>
+</div>
   <div class="clearfix"></div>
 </footer>
 <!-- /footer content -->
@@ -10,15 +10,15 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <!-- jQuery -->
-<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<script src="/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<script src="/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="../vendors/nprogress/nprogress.js"></script>
+<script src="/vendors/nprogress/nprogress.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="../build/js/custom.min.js"></script>
+<script src="/build/js/custom.min.js"></script>
 </body>
 </html>

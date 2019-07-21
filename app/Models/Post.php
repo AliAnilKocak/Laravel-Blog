@@ -18,6 +18,10 @@ class Post extends Model
         return $this->belongsToMany('App\Models\Tag','tag_post');
         //Bir kategoriye ait ürünleri getirir. belongToMany M:M ilişkiyi işaret eder.
     }
+    public function categories(){
+        return $this->belongsToMany('App\Models\Category','category_post');
+        //Bir kategoriye ait ürünleri getirir. belongToMany M:M ilişkiyi işaret eder.
+    }
 
 
 }

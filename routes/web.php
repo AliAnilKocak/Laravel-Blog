@@ -13,11 +13,17 @@ Route::get('/category/{slug_categoryname}', 'CategoryController@index')->name('c
 
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'admin'], function () {
+
         Route::get('/home', 'AdminHomePageController@index')->name('admin.homepage');
-        Route::get('/posts', 'AdminPostController@index')->name('admin.posts');
+
+        Route::group(['prefix' => 'post'], function () {
+            Route::match(['get', 'post'], '/', 'AdminPostController@index')->name('admin.posts');
+            Route::get('/create', 'AdminPostController@form')->name('admin.post.create');
+            Route::get('/edit/{id}', 'AdminPostController@form')->name('admin.post.edit');
+            Route::post('/save/{id?}', 'AdminPostController@save')->name('admin.post.save');
+            Route::get('/delete/{id}', 'AdminPostController@delete')->name('admin.post.delete');
+        });
     });
-
-
 });
 
 Route::group(['prefix' => 'admin'], function () {
