@@ -19,7 +19,7 @@
                             </div>
                         </div>
                         <hr>
-                        {{$post->content}}
+                        {{!! $post->content !!}}
                         <hr>
 
                     </div>
@@ -59,7 +59,7 @@
                     @foreach ($show_most_read_boot as $item)
 
                     <div class="post post-widget">
-                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                         </div>
@@ -78,7 +78,7 @@
                     @foreach ($show_featured_boot as $item)
 
                     <div class="post post-thumb">
-                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-3" href="#">Jquery</a>

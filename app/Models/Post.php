@@ -8,7 +8,7 @@ class Post extends Model
 {
     use SoftDeletes;
     protected $table = "post";
-    protected $guarded = [];
+    protected $fillable = ['title','description','slug','content','img','author'];
 
     public function detail()
     {

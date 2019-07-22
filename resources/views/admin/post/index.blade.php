@@ -33,8 +33,8 @@
                 <div class="x_content">
                     <div class="col-md-3 col-sm-3 col-xs-8 form-group pull-right">
                         <div class="input-group">
-                            <input name="search_word" id="search_word" type="text" value="{{old('search_word')}}" placeholder="Post Ara"
-                                class="form-control">
+                            <input name="search_word" id="search_word" type="text" value="{{old('search_word')}}"
+                                placeholder="Post Ara" class="form-control">
                             <span class="input-group-btn">
                                 <button style="color:white" type="submit" class="btn btn-primary">
                                     <span style="color:white" class="fa fa-search"></span>
@@ -50,11 +50,9 @@
             </form>
             <div class="col-md-3 col-sm-3 col-xs-3">
 
-           <a href="{{route('admin.post.create')}}">
-                <button style="color:white" type="submit" class="btn btn-primary">
-                    <span style="color:white" class="fa fa-plus"></span>
-                Yeni Post</button>
-                </div></a>
+                <a style="color:white" class="btn btn-primary" href="{{route('admin.post.create')}}">
+                    Yeni
+            </div></a>
             <table class="table table-striped jambo_table bulk_action">
                 <thead>
                     <tr>
@@ -74,17 +72,17 @@
                     @foreach ($list as $item)
                     <tr>
                         {{-- <td>{{$item->id}}</td> --}}
-                        <td style="width:340px" >{{$item->title}}</td>
+                        <td style="width:340px">{{$item->title}}</td>
                         <td><img height="54" width="54" src="{{$item->img}}"></td>
                         <td>
                             <data-toggle="tooltip" data-placement="top" title="Bannerda gözükecek mi?">
-                             @if ($item->detail->show_banner)
+                                @if ($item->detail->show_banner)
                                 <span style="color:mediumseagreen" class="fa fa-check"></span>
                                 @else
                                 <span style="color:slategrey" class="fa fa-times"></span>
                                 @endif
                         </td>
-                        <td >
+                        <td>
                             <data-toggle="tooltip" data-placement="top" title="Bannerda gözükecek mi?">
                                 @if ($item->detail->show_recently)
                                 <span style="color:mediumseagreen" class="fa fa-check"></span>
@@ -120,13 +118,14 @@
 
                         <td>{{$item->created_at}}</td>
                         <td style="width:32px;">
-                            <a href="{{route('admin.post.edit',$item->id)}}" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top"
-                                title="Postu düzenle">
+                            <a href="{{route('admin.post.edit',$item->id)}}" class="btn btn-xs btn-success"
+                                data-toggle="tooltip" data-placement="top" title="Postu düzenle">
                                 <span class="fa fa-pencil"></span>
                             </a>
 
-                            <a href="{{route('admin.post.delete',$item->id)}}" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top"
-                                title="Postu Sil" onclick="return confirm('Are you sure?')">
+                            <a href="{{route('admin.post.delete',$item->id)}}" class="btn btn-xs btn-danger"
+                                data-toggle="tooltip" data-placement="top" title="Postu Sil"
+                                onclick="return confirm('Are you sure?')">
                                 <span class="fa fa-trash"></span>
                             </a>
                             <a href="{{route('post',$item->slug)}}" class="btn btn-xs btn-primary" data-toggle="tooltip"

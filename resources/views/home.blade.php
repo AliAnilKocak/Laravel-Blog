@@ -44,7 +44,7 @@
             <!-- post -->
             <div class="col-md-4">
                 <div class="post">
-                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-1" href="category.html">Web Design</a>
@@ -93,7 +93,7 @@
                     <!-- post -->
                     <div class="col-md-6">
                         <div class="post">
-                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}"
+                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}"
                                     alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
@@ -121,7 +121,7 @@
 
                     @foreach ($show_most_read_sidebar as $item)
                     <div class="post post-widget">
-                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <h3 class="post-title"><a href="{{route('post',$item->slug)}}">{{$item->title}}</a></h3>
                         </div>
@@ -142,7 +142,7 @@
 
                     @foreach ($show_featured_sidebar as $item)
                     <div class="post post-thumb">
-                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                        <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}" alt=""></a>
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-3" href="category.html">Jquery</a>
@@ -194,7 +194,7 @@
             <!-- post -->
             <div class="col-md-4">
                 <div class="post">
-                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}" alt=""></a>
+                    <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
                             <a class="post-category cat-2" href="category.html">JavaScript</a>
@@ -232,7 +232,7 @@
                     <!-- post -->
                     <div class="col-md-12">
                         <div class="post post-row">
-                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="{{$item->img}}"
+                            <a class="post-img" href="{{route('post',$item->slug)}}"><img src="http://127.0.0.1:8000/uploads/posts/{{$item->img}}"
                                     alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">

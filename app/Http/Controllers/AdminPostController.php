@@ -40,7 +40,9 @@ class AdminPostController extends Controller
 
     public function save($id = 0)
     {
-        $data = request()->only('title', 'slug', 'description', 'author');
+
+        //dd(request('content'));
+        $data = request()->only('title', 'slug', 'description', 'author','content');
         if (!request()->filled('slug')) {
             $data['slug'] = str_slug(request('title'));
             request()->merge(['slug' => $data['slug']]);
@@ -49,7 +51,7 @@ class AdminPostController extends Controller
             'show_banner',
             'show_recently',
             'show_most_read',
-            'show_most_sidebar',
+            'show_most_read_sidebar',
             'show_featured',
             'show_featured_sidebar',
             'show_big'
