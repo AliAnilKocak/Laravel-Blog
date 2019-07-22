@@ -39,6 +39,14 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/save/{id?}', 'AdminCategoryController@save')->name('admin.category.save');
             Route::get('/delete/{id}', 'AdminCategoryController@delete')->name('admin.category.delete');
         });
+
+        Route::group(['prefix' => 'tag'], function () {
+            Route::match(['get', 'post'], '/', 'AdminTagController@index')->name('admin.tags');
+            Route::get('/create', 'AdminTagController@form')->name('admin.tag.create');
+            Route::get('/edit/{id}', 'AdminTagController@form')->name('admin.tag.edit');
+            Route::post('/save/{id?}', 'AdminTagController@save')->name('admin.tag.save');
+            Route::get('/delete/{id}', 'AdminTagController@delete')->name('admin.tag.delete');
+        });
     });
 });
 

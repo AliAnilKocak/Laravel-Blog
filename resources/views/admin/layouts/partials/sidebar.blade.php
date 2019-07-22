@@ -26,7 +26,7 @@
                                 <li><a href="{{route('admin.posts')}}"><i class="fa fa-edit"></i> Postlar </a></li>
                                 <li><a href="{{route('admin.pages')}}" ><i class="fa fa-book"></i> Sayfalar </a></li>
                                 <li><a href="{{route('admin.categories')}}" ><i class="fa fa-filter"></i> Kategoriler </a></li>
-                                <li><a><i class="fa fa-tag"></i> Etiketler </a></li>
+                                <li><a href="{{route('admin.tags')}}" ><i class="fa fa-tag"></i> Etiketler </a></li>
                                 <li><a><i class="fa fa-code"></i> Site Ayarları </a></li>
                                 <li><a><i class="fa fa-sign-out"></i> Çıkış Yap </a></li>
 

@@ -7,7 +7,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Kategoriler <small></small></h2>
+                <h2>Tagler <small></small></h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -28,18 +28,18 @@
             </div>
 
 
-            <form action="{{route('admin.categories')}}" method="POST">
+            <form action="{{route('admin.tags')}}" method="POST">
                 {{ csrf_field() }}
                 <div class="x_content">
                     <div class="col-md-3 col-sm-3 col-xs-8 form-group pull-right">
                         <div class="input-group">
                             <input name="search_word" id="search_word" type="text" value="{{old('search_word')}}"
-                                placeholder="Kategori Ara" class="form-control">
+                                placeholder="Tag Ara" class="form-control">
                             <span class="input-group-btn">
                                 <button style="color:white" type="submit" class="btn btn-primary">
                                     <span style="color:white" class="fa fa-search"></span>
                                 </button>
-                                <a class="btn btn-warning" href="{{route('admin.categories')}}">
+                                <a class="btn btn-warning" href="{{route('admin.tags')}}">
                                     <span style="color:white" class="fa fa-close"></span>
                                 </a>
 
@@ -50,7 +50,7 @@
             </form>
             <div class="col-md-3 col-sm-3 col-xs-3">
 
-                <a style="color:white" class="btn btn-primary" href="{{route('admin.category.create')}}">
+                <a style="color:white" class="btn btn-primary" href="{{route('admin.tag.create')}}">
                     Yeni
             </div></a>
             <table class="table table-striped jambo_table bulk_action">
@@ -69,12 +69,12 @@
                         <td style="width:340px">{{$item->name}}</td>
                         <td style="width:340px">{{$item->slug}}</td>
                         <td >
-                                <a href="{{route('admin.category.edit',$item->id)}}" class="btn btn-xs btn-success"
+                                <a href="{{route('admin.tag.edit',$item->id)}}" class="btn btn-xs btn-success"
                                     data-toggle="tooltip" data-placement="top" title="Kategoriyi düzenle">
                                     <span class="fa fa-pencil"></span>
                                 </a>
 
-                                <a href="{{route('admin.category.delete',$item->id)}}" class="btn btn-xs btn-danger"
+                                <a href="{{route('admin.tag.delete',$item->id)}}" class="btn btn-xs btn-danger"
                                     data-toggle="tooltip" data-placement="top" title="Kategoriyi Sil"
                                     onclick="return confirm('Are you sure?')">
                                     <span class="fa fa-trash"></span>
