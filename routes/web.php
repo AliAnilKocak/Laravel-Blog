@@ -23,6 +23,14 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/save/{id?}', 'AdminPostController@save')->name('admin.post.save');
             Route::get('/delete/{id}', 'AdminPostController@delete')->name('admin.post.delete');
         });
+
+        Route::group(['prefix' => 'page'], function () {
+            Route::match(['get', 'post'], '/', 'AdminNavbarController@index')->name('admin.pages');
+            Route::get('/create', 'AdminNavbarController@form')->name('admin.page.create');
+            Route::get('/edit/{id}', 'AdminNavbarController@form')->name('admin.page.edit');
+            Route::post('/save/{id?}', 'AdminNavbarController@save')->name('admin.page.save');
+            Route::get('/delete/{id}', 'AdminNavbarController@delete')->name('admin.page.delete');
+        });
     });
 });
 

@@ -107,12 +107,11 @@ class AdminPostController extends Controller
 
     public function delete($id)
     {
-        $product = Product::find($id);
-        $product->categories()->detach();
-        //$product->detail()->delete(); //softdelete kullandığımız için gerek yok
-        $product->delete();
-
-        return redirect()->route('manage.product')
+        $post = Post::find($id);
+        $post->categories()->detach();
+        $post->tags()->detach();
+        $post->delete();
+        return redirect()->route('admin.posts')
             ->with('message_type', 'success')
             ->with('message', 'Kullanıcı silinmiştir.');
     }
