@@ -31,6 +31,14 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/save/{id?}', 'AdminNavbarController@save')->name('admin.page.save');
             Route::get('/delete/{id}', 'AdminNavbarController@delete')->name('admin.page.delete');
         });
+
+        Route::group(['prefix' => 'category'], function () {
+            Route::match(['get', 'post'], '/', 'AdminCategoryController@index')->name('admin.categories');
+            Route::get('/create', 'AdminCategoryController@form')->name('admin.category.create');
+            Route::get('/edit/{id}', 'AdminCategoryController@form')->name('admin.category.edit');
+            Route::post('/save/{id?}', 'AdminCategoryController@save')->name('admin.category.save');
+            Route::get('/delete/{id}', 'AdminCategoryController@delete')->name('admin.category.delete');
+        });
     });
 });
 
